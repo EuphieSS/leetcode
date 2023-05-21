@@ -4,17 +4,13 @@
  */
 var arrayPairSum = function(nums) {
   const sorted = [...nums].sort((a, b ) => a - b);
-  const pairings = [];
+  let maxSum = 0;
   
   for (let i = 0; i < sorted.length; i += 2) {
     const pair = [];
     pair.push(sorted[i], sorted[i + 1]);
-    pairings.push(Math.min(...pair));
+    maxSum += (Math.min(...pair));
   }
-  
-  const maxSum = pairings.reduce(
-    (accu, currentValue) => accu + currentValue, 0
-  );
   
   return maxSum;
 };
