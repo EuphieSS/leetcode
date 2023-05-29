@@ -11,3 +11,11 @@ var rotate = function(nums, k) {
   }
   return nums;
 }
+
+// below exceeds time limit
+// var rotate = function(nums, k) {
+//   while (k--) {
+//     nums.unshift(nums.pop());
+//   }
+//   return nums;
+// };
