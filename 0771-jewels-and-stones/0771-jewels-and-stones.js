@@ -5,10 +5,6 @@
  */
 var numJewelsInStones = function(jewels, stones) {
   let output = 0;
-  for (let stone of stones) {
-    if (jewels.includes(stone)) {
-      output++;
-    }
-  }
+  stones.split('').map(stone => jewels.includes(stone) ? output++ : output);
   return output;
 };
