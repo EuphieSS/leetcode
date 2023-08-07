@@ -9,6 +9,11 @@ var secondHighest = function(s) {
       nums.push(Number(num));
     }
   }
-  nums.sort((a, b) => b - a);
-  return nums.length > 1 ? nums[1] : -1;
+  
+  if (nums.length > 1) {
+      nums.sort((a, b) => b - a);
+      return nums[1];
+  } else {
+      return -1;
+  };
 };
