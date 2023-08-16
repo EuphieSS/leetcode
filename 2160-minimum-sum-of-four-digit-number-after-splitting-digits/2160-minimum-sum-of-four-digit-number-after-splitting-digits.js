@@ -3,7 +3,7 @@
  * @return {number}
  */
 var minimumSum = function(num) {
-  const numsArr = Array.from(String(num));
+  const numsArr = num.toString().split('');
   numsArr.sort((a, b) => a - b);
   const pairs = [];
   let i = 0;
