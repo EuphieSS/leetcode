@@ -5,7 +5,7 @@
 var separateDigits = function(nums) {
   const output = [];
   nums.forEach(num => {
-    output.push(Array.from(String(num), Number));
+    output.push(String(num).split('').map(Number));
   })
   return output.flat();
 };
